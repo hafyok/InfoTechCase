@@ -59,7 +59,8 @@ fun BluetoothApp() {
                 if (bluetoothAdapter.isEnabled) {
                     val myDeviceAddress = bluetoothAdapter.address
                     val myDeviceName = bluetoothAdapter.name
-                    bluetoothStatus = "$myDeviceName : $myDeviceAddress"
+                    val state = bluetoothAdapter.state
+                    bluetoothStatus = "$myDeviceName : $myDeviceAddress : $state"
                 } else {
                     bluetoothStatus = "Bluetooth выключен"
                 }
